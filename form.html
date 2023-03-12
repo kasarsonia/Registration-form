@@ -10,80 +10,60 @@
     </head>
     <body>
         <div class="wrapper">
-            <table class="table table-bordered table-dark" id="show" method="POST">
-                <thead >
-                  <tr>
-                    <th scope="col">Sr No.{'$x'}</th>
-                    <th scope="col" >Name</th>
-                    <th scope="col" >Email</th>
-                    <th scope="col" >Contact no </th>
-                    <th scope="col" >DOB</th>
-                    <th scope="col" >Gender </th>
-                    <th scope="col" >Year of Graduation</th>
-                    <th scope="col" >Married</th>
-                    <th scope="col" >Profession</th>
-                    <th scope="col" >Address</th>
-                  </tr>
-                </thead>
-            </table>
+          <ul style="padding: 10px; text-align: left;">
+            <li>
+                <b>Name: </b><span id="name"></span>
+            </li>
+            <li>
+                <b>Email: </b><span id="email"></span>
+            </li>
+            <li>
+                <b>Phone No.: </b><span id="phoneno"></span>
+            </li>
+            <li>
+                <b>Date of Birth: </b><span id="dob"></span>
+            </li>
+            <li>
+                <b>Year of Graduation: </b><span id="yeargrad"></span>
+            </li>
+            <li>
+              <b>Gender: </b><span id="gender"></span>
+            </li>
+            <li>
+              <b>Married Status: </b><span id="married"></span>
+            </li>
+            <li>
+              <b>Profession: </b><span id="prof"></span>
+            </li>
+            <li>
+              <b>Address: </b><span id="add"></span>
+            </li>
+          </ul>
         </div>
         <script>
 
-          //document.getElementById("show").innerHTML = localStorage.getItem("textvalue");
-          //localStorage.clear();
-		
-          var list1 = [];
-          var list2 = [];
-          var list3 = [];
-          var list4 = [];
-          var list5 = [];
-          var list6 = [];
-          var list7 = [];
-          var list8 = [];
-          var list9 = [];
-      
-          var n = 1;
-          var x = 0;
-      
-          function AddRow(){
-      
-            var AddRown = document.getElementById('show');
-            var NewRow = AddRown.insertRow(n);
-      
-            list1[x] = document.getElementById("name").value;
-            list2[x] = document.getElementById("email").value;
-            list3[x] = document.getElementById("num").value;
-            list4[x] = document.getElementById("dob").value;
-            list5[x] = document.getElementById("gender").value;
-            list6[x] = document.getElementById("yeargrad").value;
-            list7[x] = document.getElementById("married").value;
-            list8[x] = document.getElementById("prof").value;
-            list9[x] = document.getElementById("add").value;
-      
-            var cel1 = NewRow.insertCell(0);
-            var cel2 = NewRow.insertCell(1);
-            var cel3 = NewRow.insertCell(2);
-            var cel4 = NewRow.insertCell(3);
-            var cel5 = NewRow.insertCell(4);
-            var cel6 = NewRow.insertCell(5);
-            var cel7 = NewRow.insertCell(6);
-            var cel8 = NewRow.insertCell(7);
-            var cel9 = NewRow.insertCell(8);
-            
-      
-            cel1.innerHTML = list1[x];
-            cel2.innerHTML = list2[x];
-            cel3.innerHTML = list3[x];
-            cel4.innerHTML = list4[x];
-            cel5.innerHTML = list5[x];
-            cel6.innerHTML = list6[x];
-            cel7.innerHTML = list7[x];
-            cel8.innerHTML = list8[x];
-            cel9.innerHTML = list9[x];
-      
-            n++;
-            x++;
-          }
+            document.getElementById("name").innerHTML = name;
+            document.getElementById("email").innerHTML = email;
+            document.getElementById("num").innerHTML = phoneno; 
+            document.getElementById("dob").innerHTML = dob; 
+            document.getElementById("yeargrad").innerHTML = yeargrad;
+            document.getElementById("gender").innerHTML = gender; 
+            document.getElementById("married").innerHTML = married;
+            document.getElementById("prof").innerHTML = prof;
+            document.getElementById("add").innerHTML = address;
+
+            var name = localStorage.getItem("name");
+            var email = localStorage.getItem("email");
+            var phoneno = localStorage.getItem("num");
+            var dob = localStorage.getItem("dob");
+            var yeargrad = localStorage.getItem("yeargrad");
+            var gender = localStorage.getItem("gender");
+            var married = localStorage.getItem("married");
+            var prof = localStorage.getItem("prof");
+            var address = localStorage.getItem("add");
+
+            localStorage.clear();
+
         </script>
     </body>
 </html>
