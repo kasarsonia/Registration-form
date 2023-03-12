@@ -42,6 +42,16 @@
         </div>
         <script>
 
+            var name = localStorage.getItem("name");
+            var email = localStorage.getItem("email");
+            var phoneno = localStorage.getItem("num");
+            var dob = localStorage.getItem("dob");
+            var yeargrad = localStorage.getItem("yeargrad");
+            var gender = localStorage.getItem("gender");
+            var married = localStorage.getItem("married");
+            var prof = localStorage.getItem("prof");
+            var address = localStorage.getItem("add");
+
             document.getElementById("name").innerHTML = name;
             document.getElementById("email").innerHTML = email;
             document.getElementById("num").innerHTML = phoneno; 
@@ -52,15 +62,7 @@
             document.getElementById("prof").innerHTML = prof;
             document.getElementById("add").innerHTML = address;
 
-            var name = localStorage.getItem("name");
-            var email = localStorage.getItem("email");
-            var phoneno = localStorage.getItem("num");
-            var dob = localStorage.getItem("dob");
-            var yeargrad = localStorage.getItem("yeargrad");
-            var gender = localStorage.getItem("gender");
-            var married = localStorage.getItem("married");
-            var prof = localStorage.getItem("prof");
-            var address = localStorage.getItem("add");
+            
 
             localStorage.clear();
 
