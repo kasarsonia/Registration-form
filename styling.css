@@ -145,6 +145,7 @@ body{
     max-width: 850px;
     background-color: #fff;
     border-radius: 5px;
+    border: 10px white;
     position: relative;
     display: flex;
     margin: 50px auto;
