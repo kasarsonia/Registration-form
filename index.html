@@ -24,7 +24,7 @@
 
         <div class="mb-3">
           <label>Contact Number</label>
-          <input type="number" name="num" id="num" class="input-field" required>
+          <input type="telynumber" name="num" id="num" class="input-field" required>
         </div>
 
         <div class="mb-3">
@@ -37,7 +37,6 @@
             <label>Gender</label>
             <!--<input type="text" name="gender" id="gender" class="input-field" required>-->
             <select class="form-select" id="gender" name="gender" required>
-              <option selected disabled value="">Program</option>
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>
@@ -47,7 +46,6 @@
             <label>Marital Status</label>
             <!--<input type="text" name="married" id="married" class="input-field" required>-->
             <select class="form-select" id="married" name="married" required>
-              <option selected disabled value="">Program</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
@@ -72,7 +70,13 @@
             </div>
             <div class="col-sm-6 mb-3">
                 <label>State</label>
-                <input type="text" name="add" id="add" class="input-field" required>
+                <!--<input type="text" name="add" id="add" class="input-field" required>-->
+                <select class="form-select" id="add" name="add" required>
+                  <option value="yes">Goa</option>
+                  <option value="no">Maharashtra</option>
+                  <option value="yes">Karnataka</option>
+                  <option value="yes">Kerala</option>
+                </select>
             </div>
         </div>
 
