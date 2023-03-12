@@ -90,12 +90,12 @@
         </div>-->
 
         <div class="col-12">
-          <button type="submit" value="Submit" class="btn btn-primary btn-block mb-4">Submit</button>
+          <button id="Submit" type="submit" value="Submit" class="btn btn-primary btn-block mb-4">Submit</button>
           
         </div>
 
         <div class="col-sm-6">
-          <button type="submit" value="list" class="btn btn-primary btn-block mb-4" >Show</button>
+          <button id="show" type="submit" value="list" class="btn btn-primary btn-block mb-4" >Show</button>
         </div>
     </form>
   </div>
@@ -125,7 +125,7 @@
         localStorage.setItem("prof", prof);
         localStorage.setItem("add", address);   
 
-        if(value=="Submit")
+        if(id=="Submit")
         {
           alert("Registered Successfully!");
           window.location.href = "dataList.html";
