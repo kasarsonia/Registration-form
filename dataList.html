@@ -11,36 +11,67 @@
     </head>
     <body>
         <div class="wrapper">
-            <table class="table table-bordered table-dark">
+            <table class="table table-bordered table-dark" id="show">
                 <thead >
                   <tr>
                     <th scope="col">Sr No.</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact no</th>
+                    <th scope="col">DOB</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Year of Passing</th>
+                    <th scope="col">Married</th>
+                    <th scope="col">Profession</th>
+                    <th scope="col">Address</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
             </table>
         </div>
-        
+        <script>
+		
+          var list1 = [];
+          var list2 = [];
+          var list3 = [];
+          var list4 = [];
+      
+          var n = 1;
+          var x = 0;
+      
+          function AddRow(){
+      
+            var AddRown = document.getElementById('show');
+            var NewRow = AddRown.insertRow(n);
+      
+            list1[x] = document.getElementById("name").value;
+            list2[x] = document.getElementById("email").value;
+            list3[x] = document.getElementById("num").value;
+            list4[x] = document.getElementById("dob").value;
+            list5[x] = document.getElementById("gender").value;
+            list6[x] = document.getElementById("yop").value;
+            list7[x] = document.getElementById("married").value;
+            list8[x] = document.getElementById("prof").value;
+            list9[x] = document.getElementById("add").value;
+      
+            var cel1 = NewRow.insertCell(0);
+            var cel2 = NewRow.insertCell(1);
+            var cel3 = NewRow.insertCell(2);
+            var cel4 = NewRow.insertCell(3);
+            var cel5 = NewRow.insertCell(4);
+            var cel6 = NewRow.insertCell(5);
+            var cel7 = NewRow.insertCell(6);
+            var cel8 = NewRow.insertCell(7);
+            var cel9 = NewRow.insertCell(8);
+      
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            cel3.innerHTML = list3[x];
+            cel4.innerHTML = list4[x];
+      
+            n++;
+            x++;
+          }
+      
+        </script>
     </body>
 </html>
