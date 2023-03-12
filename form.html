@@ -18,7 +18,7 @@
                 <b>Email: </b><span id="email"></span>
             </li>
             <li>
-                <b>Phone No.: </b><span id="phoneno"></span>
+                <b>Phone No.: </b><span id="num"></span>
             </li>
             <li>
                 <b>Date of Birth: </b><span id="dob"></span>
@@ -44,23 +44,23 @@
 
             var name = localStorage.getItem("name");
             var email = localStorage.getItem("email");
-            var phoneno = localStorage.getItem("num");
+            var num = localStorage.getItem("num");
             var dob = localStorage.getItem("dob");
             var yeargrad = localStorage.getItem("yeargrad");
             var gender = localStorage.getItem("gender");
             var married = localStorage.getItem("married");
             var prof = localStorage.getItem("prof");
-            var address = localStorage.getItem("add");
+            var add = localStorage.getItem("add");
 
             document.getElementById("name").innerHTML = name;
             document.getElementById("email").innerHTML = email;
-            document.getElementById("num").innerHTML = phoneno; 
+            document.getElementById("num").innerHTML = num; 
             document.getElementById("dob").innerHTML = dob; 
             document.getElementById("yeargrad").innerHTML = yeargrad;
             document.getElementById("gender").innerHTML = gender; 
             document.getElementById("married").innerHTML = married;
             document.getElementById("prof").innerHTML = prof;
-            document.getElementById("add").innerHTML = address;
+            document.getElementById("add").innerHTML = add;
 
             
 
