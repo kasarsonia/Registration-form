@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="wrapper">    
-    <form class="form" id="GEG" action="submit.php" method="POST">
+    <form class="form" id="GEG" onsubmit="return myFunction()" method="GET">
         <h2 class="text-uppercase">Registration form</h2>
         <div class="mb-3">
           <label>Name</label>
@@ -24,7 +24,7 @@
 
         <div class="mb-3">
           <label for="validationServer04">Contact Number</label>
-          <input type="telynumber" name="num" id="num" class="input-field" required>
+          <input type="number" class="form-control" name="num" id="num"  required>
         </div>
 
         <div class="row">
@@ -34,8 +34,8 @@
           </div>
 
           <div class="col-sm-6 mb-3">
-            <label>Year of Passing</label>
-            <input type="date" name="yop" id="yop" class="input-field" required>
+            <label>Year of Graduation</label>
+            <input type="date" name="yeargrad" id="yeargrad" class="input-field" required>
           </div>
         </div>
 
@@ -85,17 +85,47 @@
             </div>
         </div>
 
-        <div class="form-field">
-          <!--<input type="submit" value="Submit" class="register" name="register">-->
-          <a class="register" href="dataList.html" onclick="myFunction()">Submit</a>
-        </div>
+        <!--<div class="form-field">
+          <input type="submit" value="Submit" class="register" name="register">
+          <a class="register" href="dataList.html" onclick="myFunction()" type="submit">Submit</a>
+        </div>-->
+
+        <div class="col-12">
+          <button type="submit" value="Submit" class="btn btn-primary btn-block mb-4">Submit</button>
+      </div>
 
     </form>
   </div>
 
   <script>
     function myFunction(){
-      document.getElementById("GEG").submit()
+      //document.getElementById("GEG").submit()
+      //gettting the values
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phoneno = document.getElementById("num").value; 
+        var dob = document.getElementById("dob").value; 
+        var yeargrad = document.getElementById("yeargrad").value;
+        var gender = document.getElementById("gender").value; 
+        var married = document.getElementById("married").value;
+        var prof = document.getElementById("prof").value;
+        var address = document.getElementById("add").value;
+
+        //saving the values in local storage
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        localStorage.setItem("num", phoneno);
+        localStorage.setItem("dob", dob);
+        localStorage.setItem("yeargrad", yeargrad);
+        localStorage.setItem("gender", gender);
+        localStorage.setItem("married", married);
+        localStorage.setItem("prof", prof);
+        localStorage.setItem("add", address);   
+
+        alert("Registered Successfully!");
+        window.location.href = "dataList.html";
+
+      return false;
     }
   </script>
 
