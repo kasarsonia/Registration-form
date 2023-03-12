@@ -11,11 +11,11 @@
 </head>
 <body>
   <div class="wrapper">    
-    <form class="form" id="GEG" action="submit.php" method="POST">
+    <form class="form" id="GEG" action="dataList.html" method="POST">
         <h2 class="text-uppercase">Registration form</h2>
         <div class="mb-3">
           <label>Name</label>
-          <input type="text" name="name" id="name" class="input-field">
+          <input type="text" name="name" id="name" class="input-field" required>
         </div>
         <div class="mb-3">
             <label>Email</label>
@@ -24,43 +24,53 @@
 
         <div class="mb-3">
           <label>Contact Number</label>
-          <input type="text" name="num" id="num" class="input-field">
+          <input type="text" name="num" id="num" class="input-field" required>
         </div>
 
         <div class="mb-3">
           <label>Date of Birth</label>
-          <input type="date" name="dob" id="dob" class="input-field">
+          <input type="date" name="dob" id="dob" class="input-field" required>
         </div>
 
         <div class="mb-3">
           <label>Gender</label>
-          <input type="text" name="gender" id="gender" class="input-field">
+          <!--<input type="text" name="gender" id="gender" class="input-field" required>-->
+          <select class="input-field" id="gender" name="gender" required>
+            <option selected disabled value="">Program</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
         </div>
 
         <div class="mb-3">
           <label>Year of Passing</label>
-          <input type="date" name="yop" id="yop" class="input-field">
+          <input type="date" name="yop" id="yop" class="input-field" required>
         </div>
 
         <div class="mb-3">
           <label>Marital Status</label>
-          <input type="text" name="married" id="married" class="input-field">
+          <!--<input type="text" name="married" id="married" class="input-field" required>-->
+          <select class="input-field" id="married" name="married" required>
+            <option selected disabled value="">Program</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
         </div>
 
         <div class="mb-3">
           <label>Profession</label>
-          <input type="text" name="prof" id="prof" class="input-field">
+          <input type="text" name="prof" id="prof" class="input-field" required>
         </div>
 
         <div class="row">
           <label>Address</label>
             <div class="col-sm-6 mb-3">
                 <label>City</label>
-                <input type="text" name="add" id="add" class="input-field">
+                <input type="text" name="add" id="add" class="input-field" required>
             </div>
             <div class="col-sm-6 mb-3">
                 <label>State</label>
-                <input type="text" name="add" id="add" class="input-field">
+                <input type="text" name="add" id="add" class="input-field" required>
             </div>
         </div>
 
