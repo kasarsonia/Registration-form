@@ -75,18 +75,17 @@
         <div class="row">
           <label>Address</label>
             <div class="col-sm-6 mb-3">
-                <label>City</label>
-                <input type="text" name="add" id="add" class="input-field" required>
-            </div>
-            <div class="col-sm-6 mb-3">
-                <label>State</label>
-                <!--<input type="text" name="add" id="add" class="input-field" required>-->
+                <label>City, State</label>
                 <select class="form-select" id="state" name="state" required>
                   <option selected disabled value="choose"></option>
-                  <option value="yes">Goa</option>
-                  <option value="no">Maharashtra</option>
-                  <option value="yes">Karnataka</option>
-                  <option value="yes">Kerala</option>
+                  <option value="Goa">Panjim, Goa</option>
+                  <option value="Goa">Margao, Goa</option>
+                  <option value="Goa">Pernem, Goa</option>
+                  <option value="Goa">Bicholim, Goa</option>
+                  <option value="Goa">Ponda, Goa</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Kerala">Kerala</option>
                 </select>
             </div>
         </div>
@@ -119,7 +118,7 @@
         var gender = document.getElementById("gender").value; 
         var married = document.getElementById("married").value;
         var prof = document.getElementById("prof").value;
-        var add = document.getElementById("add","state").value;
+        var add = document.getElementById("add").value;
 
         //saving the values in local storage
         localStorage.setItem("name", name);
@@ -130,7 +129,7 @@
         localStorage.setItem("gender", gender);
         localStorage.setItem("married", married);
         localStorage.setItem("prof", prof);
-        localStorage.setItem("add"+"state", add);   
+        localStorage.setItem("add", add);   
 
           alert("Registered Successfully!");
           //window.location.href = "dataList.html";
