@@ -30,7 +30,7 @@ body{
     width: 100%;
 }
 
-.wrapper .form h2{
+.wrapper .form h2 , h2{
     color: #3786bd;
     padding: 20px;
     margin-left: 25%;
