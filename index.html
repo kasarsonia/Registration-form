@@ -81,7 +81,7 @@
             <div class="col-sm-6 mb-3">
                 <label>State</label>
                 <!--<input type="text" name="add" id="add" class="input-field" required>-->
-                <select class="form-select" id="add" name="add" required>
+                <select class="form-select" id="state" name="state" required>
                   <option selected disabled value="choose"></option>
                   <option value="yes">Goa</option>
                   <option value="no">Maharashtra</option>
@@ -119,7 +119,7 @@
         var gender = document.getElementById("gender").value; 
         var married = document.getElementById("married").value;
         var prof = document.getElementById("prof").value;
-        var add = document.getElementById("add").value;
+        var add = document.getElementById("add","state").value;
 
         //saving the values in local storage
         localStorage.setItem("name", name);
@@ -130,7 +130,7 @@
         localStorage.setItem("gender", gender);
         localStorage.setItem("married", married);
         localStorage.setItem("prof", prof);
-        localStorage.setItem("add", add);   
+        localStorage.setItem("add"+"state", add);   
 
           alert("Registered Successfully!");
           //window.location.href = "dataList.html";
