@@ -199,6 +199,12 @@ body{
     
 }
 
+.wrapper {
+    color: #3786bd;
+    padding: 20px;
+    margin-left: 25%;
+}
+
 @media (max-width: 575px) {
 
     .wrapper{
