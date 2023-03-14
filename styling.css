@@ -24,6 +24,17 @@ body{
     overflow: hidden;
 }
 
+.wrapper-list{
+    max-width: 850px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    margin: 50px auto;
+    box-shadow: 0 8px 20px 0px #1f1f1f1a;
+    overflow: hidden;
+}
+
 .wrapper .form{
     padding: 20px 40px;
     position: relative;
